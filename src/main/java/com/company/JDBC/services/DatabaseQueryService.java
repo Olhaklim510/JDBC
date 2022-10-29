@@ -61,7 +61,7 @@ public class DatabaseQueryService {
 
     public List<LongestProject> findLongestProject(Database database) throws Exception {
         List<LongestProject> listLongestProject = new ArrayList<>();
-        try (Connection connection = database.getConnection();) {
+        try (Connection connection = database.getConnection()) {
             String findLongestProjectFilename = new Prefs().getString(Prefs.QUERY_FIND_LONGEST_PROJECTS_SQL_FILE_PATH);
             String sql = String.join("\n", Files.readAllLines(Path.of(findLongestProjectFilename)));
 
@@ -84,7 +84,7 @@ public class DatabaseQueryService {
 
     public List<YoungestEldestWorkers> findYoungestEldestWorkers(Database database) throws Exception {
         List<YoungestEldestWorkers> listYoungestEldestWorkers = new ArrayList<>();
-        try (Connection connection = database.getConnection();) {
+        try (Connection connection = database.getConnection()) {
             String findYoungestEldestWorkersFilename = new Prefs().getString(Prefs.QUERY_FIND_YOUNGEST_ELDEST_WORKERS_SQL_FILE_PATH);
             String sql = String.join("\n", Files.readAllLines(Path.of(findYoungestEldestWorkersFilename)));
 
@@ -108,7 +108,7 @@ public class DatabaseQueryService {
 
     public List<ProjectPrices> findProjectPrices (Database database) throws Exception {
         List<ProjectPrices> listProjectPrices = new ArrayList<>();
-        try (Connection connection = database.getConnection();) {
+        try (Connection connection = database.getConnection()) {
             String findProjectPricesFilename = new Prefs().getString(Prefs.QUERY_FIND_PROJECT_PRICES_SQL_FILE_PATH);
             String sql = String.join("\n", Files.readAllLines(Path.of(findProjectPricesFilename)));
 
