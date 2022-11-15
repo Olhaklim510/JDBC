@@ -1,4 +1,4 @@
-package com.company.JDBC.model;
+package com.company.jdbs.model;
 
 public class LongestProject {
     private String name;

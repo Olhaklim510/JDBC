@@ -23,9 +23,9 @@ test {
 }
 
 jar {
-    archiveName 'JDBC.jar'
+    archiveName 'jdbs.jar'
     manifest {
-        attributes 'Main-Class':'com.company.JDBC.App.java'
+        attributes 'Main-Class':'com.company.jdbs.App.java'
     }
     from {
         exclude '**/module-info.class'
